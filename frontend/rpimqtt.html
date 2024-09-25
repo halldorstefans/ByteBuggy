@@ -61,7 +61,7 @@
       const reconnectTimeout = 2000;
       const host = "test.mosquitto.org";
       const port = 8081;
-      const topic = "command_pi";
+      const topic = "control_pi";
 
       const onConnectionLost = (responseObject) => {
         console.log("Connection lost: " + responseObject.errorMessage);
