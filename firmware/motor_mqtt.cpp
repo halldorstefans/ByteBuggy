@@ -16,12 +16,6 @@ using namespace chrono;
 
 bool running = true;
 
-const string SERVER_ADDRESS	{ "mqtt://test.mosquitto.org:1883" };
-const string CLIENT_ID		{ "rpi_car" };
-const string RPI_CTRL_TOPIC	{ "control_pi" };
-const vector<string> TOPICS { RPI_CTRL_TOPIC };
-const vector<int> QOS { 1 };
-
 constexpr int HORN = 0;
 constexpr int SERVO = 1;
 constexpr int LIGHT = 4;
@@ -35,6 +29,13 @@ constexpr int FULL_SPEED = 255;
 constexpr int STEER_LEFT = 12;
 constexpr int STEER_RIGHT = 18;
 constexpr int STEER_STRAIGHT = 15;
+
+const string RPI_CTRL_TOPIC	= "bytebuggy_control";
+
+const string SERVER_ADDRESS	{ "mqtt://test.mosquitto.org:1883" };
+const string CLIENT_ID		{ "bytebuggy_311" };
+const vector<string> TOPICS { RPI_CTRL_TOPIC };
+const vector<int> QOS { 1 };
 
 /////////////////////////////////////////////////////////////////////////////
 
